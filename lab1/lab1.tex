@@ -1,0 +1,233 @@
+\documentclass[12pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+
+\input{macros-formalization}
+
+\title{Lab 1}
+\author{DD2481 - Principles of Programming Languages}
+\date{30 March 2021}
+
+\begin{document}
+\maketitle
+
+\section{Goal}
+
+The goal of this lab is the implementation of an interpreter for the
+untyped lambda calculus extended with boolean and arithmetic
+expressions, as seen in the lectures. We provide a code
+template. Below we explain the parts of the template that you need to
+be familiar with, however, we recommend that you spend some time
+exploring also other parts of the template not mentioned below. (For
+reference, we will refer to different files in the source
+distribution; in each case we omit the common prefix
+``src/main/scala/simpret/''.)
+
+The syntax and small-step evaluation rules follow.
+
+Syntax:
+
+\[\begin{array}{rclr}
+t &\bnfdef& ~ & \mathit{terms:} \\
+~ &~      & \TRUE            & \mathit{constant~true} \\
+~ &\bnfalt& \FALSE           & \mathit{constant~false} \\
+~ &\bnfalt& \ifelse{t}{t}{t} & \mathit{conditional} \\
+~ &\bnfalt& c                & \mathit{integer~constant} \\
+~ &\bnfalt& \ISZERO~t        & \mathit{zero~test} \\
+~ &\bnfalt& t + t            & \mathit{integer~addition} \\
+~ &\bnfalt& x                & \mathit{variable} \\
+~ &\bnfalt& \lambda x.~t     & \mathit{abstraction} \\
+~ &\bnfalt& t~t              & \mathit{application} \\
+\end{array}\]
+
+\[\begin{array}{rclr}
+v &\bnfdef& ~ & \mathit{values:} \\
+~ &~      & \TRUE            & \mathit{true~value} \\
+~ &\bnfalt& \FALSE           & \mathit{false~value} \\
+~ &\bnfalt& c                & \mathit{integer~value} \\
+~ &\bnfalt& \lambda x.~t     & \mathit{abstraction} \\
+\end{array}\]
+
+\[\begin{array}{rcl}
+(c &{\color{blue}{\in}}& \{\dots,-2,-1,0,1,2,\dots\}) \\
+(x &{\color{blue}{\in}}& \{\tx_1,\tx_2,\dots,\ty_1,\ty_2,\dots,\tz_1,\tz_2,\dots,\dots\})
+\end{array}\]
+\newpage
+Evaluation:
+
+\begin{mathpar}
+    \infer[E-IfTrue]{}{\eval{\ifelse{\TRUE}{t_2}{t_3}}{t_2}}
+
+    \infer[E-IfFalse]{}{\eval{\ifelse{\FALSE}{t_2}{t_3}}{t_3}} \quad
+
+    \infer[E-If]{\eval{t_1}{t_1'}}{\eval{\ifelse{t_1}{t_2}{t_3}}{\ifelse{t_1'}{t_2}{t_3}}}
+
+    \infer[E-IsZeroZero]{}{\eval{\ISZERO~0}{\TRUE}} \quad
+
+    \infer[E-IsZeroNonZero]{c \neq 0}{\eval{\ISZERO~c}{\FALSE}} \quad
+
+    \infer[E-IsZero]{\eval{t_1}{t_1'}}{\eval{\ISZERO~t_1}{\ISZERO~t_1'}} \quad
+
+    \infer[E-Add]{}{\eval{c_1 + c_2}{c_1~\mathcal{I}(+)~c_2}} \quad
+
+    \infer[E-AddRight]{\eval{t_2}{t_2'}}{\eval{c_1 + t_2}{c_1 + t_2'}} \quad
+
+    \infer[E-AddLeft]{\eval{t_1}{t_1'}}{\eval{t_1 + t_2}{t_1' + t_2}} \quad
+
+    \infer[E-App1]{\eval{t_1}{t_1'}}{\eval{t_1~t_2}{t_1'~t_2}} \quad
+
+    \infer[E-App2]{\eval{t_2}{t_2'}}{\eval{v_1~t_2}{v_1~t_2'}} \quad
+
+    \infer[E-AppAbs]{}{\eval{(\lambda x.~t_1)~v_2}{[x \mapsto v_2]t_1}}
+  \end{mathpar}
+
+The interpreter should be based directly on the small-step evaluation rules.
+
+In order to be able to parse source code, we are providing you with a
+code template that includes a fully-functioning and complete lexer and
+parser (the implementation uses an approach called parser combinators,
+provided by the Scala library at
+\texttt{https://github.com/scala/scala-parser-combinators}). You do
+not have to work on these parts at all. The result of parsing a
+program is an abstract syntax tree (AST). The AST, which is also
+provided to you, is implemented in Scala as follows (file
+``parser/AST.scala''):
+
+\newpage
+\begin{verbatim}
+trait AST extends Positional
+case class Variable(id: String) extends AST
+case class BoolLit(b: Boolean) extends AST
+case class IntLit(i: Int) extends AST
+case class CondExp(c: AST, e1: AST, e2: AST) extends AST
+case class IsZeroExp(e: AST) extends AST
+case class PlusExp(e1: AST, e2: AST) extends AST
+case class LamExp(id: String, e: AST) extends AST
+case class AppExp(e1: AST, e2: AST) extends AST
+\end{verbatim}
+
+Your task is to implement the \texttt{step} method of the
+ \texttt{Interpreter} singleton object in file
+ ``interpreter/Interpreter.scala'':
+
+\begin{verbatim}
+def step(tree: AST): Option[AST] = {
+  // TODO: your implementation goes here
+}
+\end{verbatim}
+
+In order to do one (small) step of computation, the idea is to match
+on the AST parameter \verb|tree|:
+
+\begin{verbatim}
+tree match {
+  case PlusExp(e1, e2) if !isvalue(e1) => ...
+  ...
+}
+\end{verbatim}
+
+For developing and testing your solution you can use the Main object
+(file ``Main.scala'') and also the automated unit tests (see below).
+
+\section{Build Tool}
+
+The project is built using sbt, the most widely used build tool in
+Scala.\footnote{See \texttt{https://www.scala-sbt.org}} Make sure to
+familiarize yourself with sbt, so that you are able to compile and run
+the code template. The guide ``Getting Started with sbt'' is a good
+starting
+point:\\ \texttt{https://www.scala-sbt.org/1.x/docs/Getting-Started.html}
+
+You can build the project by invoking \texttt{sbt} in the root
+directory of the project:
+
+\begin{verbatim}
+$ sbt
+[info] Loading project definition from ...
+[info] Loading settings from build.sbt ...
+[info] Set current project to simpret (in build file:/...
+[info] sbt server started at local:///...
+sbt:simpret>
+\end{verbatim}
+
+You get to an input prompt where you can enter sbt commands, such as
+\texttt{compile}, for compiling the source of the current project, and
+\texttt{run}, for running the main object. Make sure that
+\texttt{compile} works. (Compiling will output JVM class files into
+the directory ``lab1/target/scala-2.12/classes''.) Importantly, you
+can pass arguments to the \texttt{run} command. The code template
+comes with a main object where you can provide the file name of a
+source file that contains an expression to be interpreted.
+
+For example, put the following expression into a file ``test.sint'':
+\begin{verbatim}
+if true then 3 else 4
+\end{verbatim}
+
+Then, at the sbt prompt, enter \texttt{run test.sint} and press
+enter. You should see output similar to the following:
+
+\begin{verbatim}
+sbt:simpret> run test.sint
+[info] Packaging /Users/.../lab1/target/scala-2.12/simpret_...
+[info] Done packaging.
+[info] Running simpret.Main test.sint
+==========================================================
+AST
+==========================================================
+if true then
+  3
+else
+  4
+==========================================================
+Evaluation stuck!
+Stuck at
+==================
+if true then
+  3
+else
+  4
+==================
+[success] Total time: 1 s, completed Mar 27, 2019 9:35:46 PM
+\end{verbatim}
+
+It says that evaluation is stuck, because the interpreter has not been
+implemented, yet. You also see that it provides a pretty-printed
+rendering of the AST.
+
+\section{Unit Testing}
+
+The provided template is set up to enable running automated unit
+tests, using a testing framework called ScalaTest. Unit tests can be
+run from the sbt prompt using the ``test'' command. We provide a suite
+of tests which your solution needs to pass to be accepted.
+
+There are two kinds of unit tests. The first kind consists of a source
+file located in ``src/test/sint/lab1/'', for example,
+\newline``src/test/sint/lab1/case\_0\_cond\_0.sint''. This file is parsed and
+evaluated using the code in
+\newline``src/test/scala/simpret/MainTestLab1.scala'' and compared to an
+expected outcome, in this case \verb|Right(IntLit(11))|.
+
+The second kind of unit test consists of a pair of files located in
+\newline``src/test/sint/lab1/steptests/''. For example, ``Add-0.sint''
+contains the initial program, and ``Add-0.sint.step'' contains the result
+of one (small) step of the evaluation. All of the (pairs of) files in
+the ``steptests'' directory are run and checked automatically when you
+start the unit tests in sbt.
+
+Let's get one of the tests to pass. For this we replace the
+\verb|None| in the \verb|step| method in the \verb|Interpreter| object
+with the following code:
+
+\begin{verbatim}
+tree match {
+  case PlusExp(IntLit(x), IntLit(y)) =>
+    Some(IntLit(x + y))
+  // TODO: complete implementation here
+  case _ => None
+}
+\end{verbatim}
+
+Good luck!
+
+\end{document}

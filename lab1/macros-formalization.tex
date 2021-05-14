@@ -1,0 +1,112 @@
+\usepackage[override]{cmtt}
+\usepackage{mathpartir} % available from http://cristal.inria.fr/~remy/latex/
+\usepackage{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%% BNF
+\newcommand \bnfdef  {\mathrel{\color{blue}{::=}}}
+\newcommand \bnfalt  {\mathrel{\color{blue}{|}}}
+
+%%%%%%%%%%%%%%%%%%%%%
+\newcommand \keyfont {\mathsf}
+\newcommand \WHILE   {\keyfont{while}}
+\newcommand \IF      {\keyfont{if}}
+\newcommand \THEN    {\keyfont{then}}
+\newcommand \ELSE    {\keyfont{else}}
+\newcommand \TRUE    {\keyfont{true}}
+\newcommand \FALSE   {\keyfont{false}}
+\newcommand \ISZERO  {\keyfont{iszero}}
+\newcommand \SKIP    {\keyfont{skip}}
+\newcommand \ASS     {\texttt{:=}}
+\newcommand \SEQ     {\texttt{;}}
+
+\newcommand \while[2]   {\WHILE\ {#1}\ {#2}}
+\newcommand \ifelse[3]  {\IF\ {#1}\ \THEN\ {#2}\ \ELSE\ {#3}}
+
+\newcommand \bluearr {{\color{blue}\rightarrow}}
+\newcommand \bluemarr {{\color{blue}\rightarrow^*}}
+\newcommand \bluearrt[1] {{\color{blue}\xrightarrow{#1}}}
+\newcommand \bluesemi {{\color{blue};}}
+
+\newcommand \tx {\mathtt{x}}
+\newcommand \ty {\mathtt{y}}
+\newcommand \tz {\mathtt{z}}
+
+\newcommand \eval[2] {{#1}\ \bluearr\ {#2}}
+\newcommand \meval[2] {{#1}\ \bluemarr\ {#2}}
+\newcommand \seval[4] {{#1}~|~{#2}\ \bluearr\ {#3}~|~{#4}}
+
+\newcommand \expeval[3] {{#1}\ \bluesemi\ {#2}\
+  {\color{blue}\Downarrow}\ {#3}}
+\newcommand \stmteval[4] {{#1}\ \bluesemi\ {#2}\ 
+  {\bluearr}\ {#3}\ \bluesemi\ {#4}}
+\newcommand \stmtevalM[4] {{#1}\ \bluesemi\ {#2}\ 
+  {\bluearr^{\color{blue}*}}\ {#3}\ \bluesemi\ {#4}}
+\newcommand \stmtevaln[5] {{#2}\; \bluesemi \; {#3}\;\;
+  {\bluearr^{\color{blue}#1}}\;\; {#4}\; \bluesemi \; {#5}}
+
+\newcommand \noneg[1] {\mathit{noneg}(#1)}
+
+\newcommand \denote[1] {\mathit{den}(#1)}
+
+% for equivalence
+\newcommand \expsmall[3] {{#1}{\color{blue};}\ {#2}{\color{blue}\
+    \rightarrow\ }{#3}}
+\newcommand \expsmallM[3]
+    {{#1}{\color{blue};}\ {#2}{\color{blue}\ \rightarrow^*\ }{#3}}
+\newcommand \expsmalln[4] {{#2}{\color{blue};}\ {#3}{\color{blue}\
+    \rightarrow^{#1}\ }{#4}}
+
+%%%%%%%%%%%%%%%%%%%%
+\newcommand \T {\tau}
+\newcommand \G {\Gamma}
+\newcommand \C {\cdot}
+\newcommand \A \alpha
+\newcommand \B {\beta}
+\newcommand \D {\Delta}
+\newcommand \intty {\mathsf{int}}
+\newcommand \unitty {\mathsf{unit}}
+\newcommand \fnty[2] {{#1}\rightarrow {#2}}
+\newcommand \lam[2] {\lambda{#1}.\ {#2}}
+\newcommand \subst[3] {{#1}[{#2}/{#3}]}
+\newcommand \tc[3]{{#1} \vdash {#2} : {#3}}
+\newcommand \dom {\mathrm{Dom}}
+\newcommand \arr {\rightarrow}
+
+\newcommand \letin[3] {\mathsf{let}\ {#1}={#2}\ \mathsf{in}\ {#3}}
+\newcommand \tru {\mathsf{true}}
+\newcommand \fls {\mathsf{false}}
+\newcommand \boolty {\mathsf{bool}}
+
+\newcommand \pairty[2] {{#1}*{#2}}
+
+%% \newcommand \inl[1] {\mathsf{inl}({#1})}
+%% \newcommand \inr[1] {\mathsf{inr}({#1})}
+%% \newcommand \case[4] {\mathsf{case}\ {#1}\ {#2}.{#3}\ |\ {#2}.{#4}}
+\newcommand \Ac{\mathsf{A}}
+\newcommand \Bc{\mathsf{B}}
+\newcommand \Acons[1] {\Ac({#1})}
+\newcommand \Bcons[1] {\Bc({#1})}
+\newcommand \match[5] {\mathsf{match}\ {#1}\ \mathsf{with}\ \Ac {#2}.\
+  {#3}\ |\ \Bc {#4}.\ {#5}}
+\newcommand \sumty[2] {{#1}+{#2}}
+
+\newcommand \fix[1] {\mathsf{fix}\ {#1}}
+
+\newcommand \Lam[2] {\Lambda{#1}.\ {#2}}
+
+\newcommand \primstep[2] {{#1}\stackrel{\mathrm{p}}{\rightarrow}{#2}}
+
+\newcommand \LETCC {\mathsf{letcc}}
+\newcommand \THROW {\mathsf{throw}}
+\newcommand \letcc[2] {\LETCC\ {#1}.\ {#2}}
+\newcommand \throw[2] {\THROW\ {#1}\ {#2}}
+\newcommand \cont[1]  {\mathsf{cont}\ {#1}}
+
+\newcommand \forallty[2] {\forall{#1}.{#2}}
+\newcommand \existsty[2] {\exists{#1}.{#2}}
+\newcommand \muty[2] {\mu{#1}.{#2}}
+
+\newcommand \kc[2] {{#1}\vdash{#2}}
+\newcommand \tcF[4]{{#1};{#2} \vdash {#3} : {#4}}
+
+\newcommand \erase[1] {\mathit{erase}({#1})}

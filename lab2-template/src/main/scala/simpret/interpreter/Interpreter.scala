@@ -32,37 +32,52 @@ object Interpreter {
     x match{
         case Variable(id) => List(id)    
         case IsZeroExp(e) => freevars(e)
-      case AppExp(e1, e2) => freevars(e1)++freevars(e2)
+        case AppExp(e1, e2) => freevars(e1)++freevars(e2)
         case CondExp(c, e1, e2) => freevars(c)++freevars(e1)++freevars(e2)
         case PlusExp(e1, e2) => freevars(e1)++freevars(e2)
-    case LamExp(id, t) => freevars(t).filterNot( _ == id )
+
+        case LamExp(id, _, e) => freevars(e).filterNot( _ == id )
+
         case _ => List()
     }
   }
 
   /* function for carrying out a substitution */
-  def subst(t: AST, x: String, y: AST): AST = t match {
+  /* [x -> y] t */
+  def substitute(t: AST, x: String, y: AST): AST = t match {
     case Variable(t1) if (t1==x) => y
     case Variable(t1) if (t1!=x) => t
-    case LamExp(t1, e) if (t1==x) => t
-    case LamExp(t1, e) if (t1!=x)&&(!freevars(y).contains(t1)) => LamExp(t1, substitute(e, x, y))
-    case LamExp(t1, e) if (t1!=x)&&(freevars(y).contains(t1)) => LamExp(identifier, substitute(alphaReduce(e, t1, identifier), x, y))
+    //case LamExp(t1, e) if (t1==x) => t
+    //case LamExp(t1, e) if (t1!=x)&&(!freevars(y).contains(t1)) => LamExp(t1, substitute(e, x, y))
+    //case LamExp(t1, e) if (t1!=x)&&(freevars(y).contains(t1)) => LamExp(identifier, substitute(alphaReduce(e, t1, identifier), x, y))
+    case LamExp(t1, ty, e) if (t1==x) => t
+    case LamExp(t1, ty, e) if (t1!=x)&&(!freevars(y).contains(t1)) => LamExp(t1, substitute(e, x, y))
+    case LamExp(t1, ty, e) if (t1!=x)&&(freevars(y).contains(t1)) => LamExp(identifier, substitute(alphaReduce(e, t1, identifier), x, y))
+
     case AppExp(e1, e2) => AppExp(substitute(e1, x, y), substitute(e2, x, y))
     case IsZeroExp(e) => IsZeroExp(substitute(e, x, y))
     case PlusExp(e1, e2) => PlusExp(substitute(e1, x, y), substitute(e2, x, y))
     case CondExp(c, e1, e2) => CondExp(substitute(c, x, y), substitute(e1, x, y), substitute(e2, x, y))
+
+    case LtExp(e1, e2) => LtExp(substitute(e1, x, y), subst(e2, x, y))
+    case UMinExp(e) => UMinExp(substitute(e, x, y))
+    case FixAppExp(e) => FixAppExp(subst(e, x, y))
+    case LetExp(id, e1, e2) if (!freevars(y).contains(id))&&(id==x) => LetExp(id, substitute(e1, x, y), e2)
+    case LetExp(id, e1, e2) if (!freevars(y).contains(id))&&(id!=x) => LetExp(id, substitute(e1, x, y), substitute(e2, x, y))
+    case LetExp(id, e1, e2) if (freevars(y).contains(id)) => errVarCap(id, y)
+
     case _ => t
 	}
 
   def alphaReduce(t: AST, x: String, y: String): AST = t match {
     case Variable(t1) if (t1==x) => Variable(y)
-	  case Variable(t1) if (t1!=x) => t
+	case Variable(t1) if (t1!=x) => t
     case IsZeroExp(e) => IsZeroExp(alphaReduce(e, x, y))
    	case AppExp(e1, e2) => AppExp(alphaReduce(e1, x, y), alphaReduce(e2, x, y))
     case CondExp(c, e1, e2) => CondExp(alphaReduce(c, x, y), alphaReduce(e1, x, y), alphaReduce(e2, x, y))
     case PlusExp(e1, e2) => PlusExp(alphaReduce(e1, x, y), alphaReduce(e2, x, y))
-	  case LamExp(id, t1) if (id==x) => t
-	  case LamExp(id, t1) if (id!=x) => LamExp(id, alphaReduce(t1, x, y))
+	case LamExp(id, t1) if (id==x) => t
+	case LamExp(id, t1) if (id!=x) => LamExp(id, alphaReduce(t1, x, y))
     case _ => t
   }
   
@@ -88,20 +103,63 @@ object Interpreter {
     		case None => None
     		case Some(y1) => Some(PlusExp(IntLit(x),y1))
 		  }
-	    case PlusExp(x, y) if (!isvalue(x)) => step(x) match {
+	  case PlusExp(x, y) if (!isvalue(x)) => step(x) match {
     		case None => None
     		case Some(x1) => Some(PlusExp(x1,y))
-		  }
+	  }
 	
 	    case AppExp(x, y) if (!isvalue(x)) => step(x) match{
         case None => None
         case Some(x1) => Some(AppExp(x1, y))
 		  }
-      case AppExp(x, y) if (!isvalue(y)) => step(y) match{
+        case AppExp(x, y) if (!isvalue(y)) => step(y) match{
         case None => None
         case Some(y1) => Some(AppExp(x, y1))
 		  }
-      case AppExp(LamExp(x, t), y) if (isvalue(y)) => Some(substitute(t, x, y)) 
+      case AppExp(LamExp(x, _, t), y) if (isvalue(y)) => Some(substitute(t, x, y))
+
+      // E-LessThanLeft
+      case LtExp(x, y) if !isvalue(x) => step(x) match {
+        case Some(x1) => Some(LtExp(x1, y))
+        case None => None
+      }
+      // E-LessThanRight
+      case LtExp(x, y) if !isvalue(y) => step(y) match {
+        case Some(y1) => Some(LtExp(x, y1))
+        case None => None
+      }
+      // E-LessThan
+      case LtExp(x, y) => (x,y) match {
+        case (IntLit(x1), IntLit(y1)) => Some(BoolLit(x1 < y1))
+        case _ => None
+      }
+      // E-Minus
+      case UMinExp(x) if !isvalue(x) => step(x) match {
+        case Some(x1) => Some(UMinExp(x1))
+        case None => None
+      }
+      // E-MinusVal
+      case UMinExp(x) => x match {
+        case IntLit(x1 => Some(IntLit(x1 * (-1)))
+        case _ => None
+      }
+      // E-Let
+      case LetExp(id, x, y) if !isvalue(x) => step(x) match {
+        case Some(x1) => Some(LetExp(id, x1, y))
+        case None => None
+      }
+      // E-LetV
+      case LetExp(id, x, y) => Some(substitute(id, x, y))
+      // E-Fix
+      case FixAppExp(x) if !isvalue(x) => step(x) match {
+        case Some(x1) => Some(FixAppExp(x1))
+        case None => None
+      }
+      // E-FixBeta
+      case FixAppExp(x) => x match {
+        case LamExp(id, t1, e) => Some(substitute(id, x1, e))
+        case _ => None
+      }
 
       case _ => None
 	  }

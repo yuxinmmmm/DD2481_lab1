@@ -1,0 +1,32 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mMainTestLab1:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test Add-0.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test Add-1.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test AddLeft-0.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test AddRight-0.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test App1-0.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test App1-1.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test App2-0.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test App2-1.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test AppAbs-0.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test AppAbs-1.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test if-0.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test if-1.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test IfFalse-0.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test IfTrue-0.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- fixpoint test w.o. type check pleaseTerminate.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test w.o. type check variableCapture1.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  simpret.interpreter.VariableCapturedEvaluationException: variable (y) has been captured during substitution[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.interpreter.Interpreter$.errVarCap(Interpreter.scala:16)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.interpreter.Interpreter$.substitute(Interpreter.scala:55)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.interpreter.Interpreter$.step(Interpreter.scala:120)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.interpreter.Interpreter$.step(Interpreter.scala:112)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.interpreter.Interpreter$.eval(Interpreter.scala:170)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.fixAutoTest(MainTestInterpreter.scala:111)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.fixAutoTestNoTypeCheck(MainTestInterpreter.scala:93)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab1.$anonfun$new$4(MainTestLab1.scala:28)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- TestCaseLab1 0 COND[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- TestCaseLab1 1 ABC[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- TestCaseLab1 2 XYZ[0m[0m

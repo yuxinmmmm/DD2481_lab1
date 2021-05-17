@@ -1,0 +1,11 @@
+[0m[[0m[33mwarn[0m] [0m[0mC:\D\PycharmProjects\dd2481_lab2\DD2481_lab1\lab2-template\src\test\scala\simpret\MainTestLab1.scala:18:1: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses[0m
+[0m[[0m[33mwarn[0m] [0m[0m'''[0m
+[0m[[0m[33mwarn[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\D\PycharmProjects\dd2481_lab2\DD2481_lab1\lab2-template\src\test\scala\simpret\MainTestLab1.scala:19:3: not found: value filesFix[0m
+[0m[[0m[31merror[0m] [0m[0m  filesFix.foreach { file =>[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\D\PycharmProjects\dd2481_lab2\DD2481_lab1\lab2-template\src\test\scala\simpret\MainTestLab1.scala:24:1: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses[0m
+[0m[[0m[33mwarn[0m] [0m[0m'''[0m
+[0m[[0m[33mwarn[0m] [0m[0m^[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

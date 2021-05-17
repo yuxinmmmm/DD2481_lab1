@@ -1,0 +1,474 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mMainTestLab2:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test fix.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test fixBeta.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Some(FixAppExp(LamExp(x,ArrowTy(IntTy,IntTy),LamExp(y,IntTy,AppExp(Variable(x),IntLit(3)))))) did not equal Some(LamExp(y,IntTy,AppExp(FixAppExp(LamExp(x,ArrowTy(IntTy,IntTy),LamExp(y,IntTy,AppExp(Variable(x),IntLit(3))))),IntLit(3)))) (MainTestInterpreter.scala:78)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test headCons.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: HeadExp(ConsExp(IntLit(2),NilExp(IntTy))) (of class simpret.parser.HeadExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTest(MainTestInterpreter.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$2(MainTestLab2.scala:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test headStep.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: HeadExp(ConsExp(IntLit(1),ConsExp(PlusExp(IntLit(2),IntLit(3)),NilExp(IntTy)))) (of class simpret.parser.HeadExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTest(MainTestInterpreter.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$2(MainTestLab2.scala:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test isNilConst.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: IsNilExp(ConsExp(IntLit(2),NilExp(IntTy))) (of class simpret.parser.IsNilExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTest(MainTestInterpreter.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$2(MainTestLab2.scala:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test isNilNil.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: IsNilExp(NilExp(BoolTy)) (of class simpret.parser.IsNilExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTest(MainTestInterpreter.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$2(MainTestLab2.scala:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test lessThan.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test lessThan_2.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test listLeftStep.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: ConsExp(PlusExp(IntLit(3),IntLit(4)),ConsExp(PlusExp(IntLit(2),IntLit(1)),NilExp(IntTy))) (of class simpret.parser.ConsExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTest(MainTestInterpreter.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$2(MainTestLab2.scala:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test listRightStep.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: ConsExp(IntLit(7),ConsExp(PlusExp(IntLit(2),IntLit(1)),NilExp(IntTy))) (of class simpret.parser.ConsExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTest(MainTestInterpreter.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$2(MainTestLab2.scala:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- step test minus.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test PlusMinus-0.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Some(LetExp(f,FixAppExp(LamExp(f,ArrowTy(IntTy,IntTy),LamExp(x,IntTy,PlusExp(AppExp(Variable(f),Variable(x)),IntLit(1))))),AppExp(Variable(f),IntLit(2)))) did not equal Some(LetExp(f,LamExp(x,IntTy,PlusExp(AppExp(FixAppExp(LamExp(f,ArrowTy(IntTy,IntTy),LamExp(x,IntTy,PlusExp(AppExp(Variable(f),Variable(x)),IntLit(1))))),Variable(x)),IntLit(1))),AppExp(Variable(f),IntLit(2)))) (MainTestInterpreter.scala:78)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test projRecord.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: ProjRecordExp(RecordExp(Map(a -> IntLit(3), work -> LamExp(x,IntTy,PlusExp(Variable(x),IntLit(1))))),a) (of class simpret.parser.ProjRecordExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTest(MainTestInterpreter.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$2(MainTestLab2.scala:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test projTuple.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: ProjTupleExp(TupleExp(List(IntLit(1), LamExp(x,IntTy,PlusExp(Variable(x),IntLit(1))))),2) (of class simpret.parser.ProjTupleExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTest(MainTestInterpreter.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$2(MainTestLab2.scala:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test stepProjRecord.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: ProjRecordExp(ProjTupleExp(TupleExp(List(IntLit(2), RecordExp(Map(a -> IntLit(5), work -> LamExp(x,IntTy,PlusExp(Variable(x),IntLit(1))))))),2),a) (of class simpret.parser.ProjRecordExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTest(MainTestInterpreter.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$2(MainTestLab2.scala:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test stepProjTuple.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: ProjTupleExp(ProjTupleExp(TupleExp(List(TupleExp(List(IntLit(1), IntLit(2))), TupleExp(List(IntLit(3), IntLit(4))))),2),2) (of class simpret.parser.ProjTupleExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTest(MainTestInterpreter.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$2(MainTestLab2.scala:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test stepRecord.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: RecordExp(Map(a -> PlusExp(IntLit(3),IntLit(2)), work -> LamExp(x,IntTy,PlusExp(Variable(x),IntLit(1))))) (of class simpret.parser.RecordExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTest(MainTestInterpreter.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$2(MainTestLab2.scala:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test stepTuple.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: TupleExp(List(PlusExp(IntLit(1),IntLit(3)), PlusExp(IntLit(2),IntLit(3)))) (of class simpret.parser.TupleExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTest(MainTestInterpreter.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$2(MainTestLab2.scala:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test tailCons.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: TailExp(ConsExp(IntLit(2),NilExp(IntTy))) (of class simpret.parser.TailExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTest(MainTestInterpreter.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$2(MainTestLab2.scala:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test tailStep.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: TailExp(ConsExp(PlusExp(IntLit(3),IntLit(1)),NilExp(IntTy))) (of class simpret.parser.TailExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTest(MainTestInterpreter.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$2(MainTestLab2.scala:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- step test typableHeadNil.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: HeadExp(NilExp(IntTy)) (of class simpret.parser.HeadExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:33)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTest(MainTestInterpreter.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$2(MainTestLab2.scala:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test case_0_recfun_0.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  LamExp(x,BoolTy,LamExp(y,BoolTy,CondExp(Variable(x),Variable(y),BoolLit(false)))) did not equal IntLit(27) (MainTestInterpreter.scala:111)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- fixpoint test case_0_square_0.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test case_0_square_1.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  IntLit(12) did not equal IntLit(144) (MainTestInterpreter.scala:111)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test case_0_square_2.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  IntLit(15) did not equal IntLit(225) (MainTestInterpreter.scala:111)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test case_0_square_3.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  IntLit(200) did not equal IntLit(40000) (MainTestInterpreter.scala:111)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test case_1_extensions_0.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: NilExp(IntTy) (of class simpret.parser.NilExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:65)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.fixAutoTest(MainTestInterpreter.scala:101)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$4(MainTestLab2.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test case_1_extensions_1.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: ConsExp(IntLit(1),ConsExp(IntLit(2),ConsExp(IntLit(3),NilExp(IntTy)))) (of class simpret.parser.ConsExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:65)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.fixAutoTest(MainTestInterpreter.scala:101)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$4(MainTestLab2.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test case_1_extensions_2.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: TupleExp(List(IntLit(3), IntLit(2), IntLit(1))) (of class simpret.parser.TupleExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:65)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.fixAutoTest(MainTestInterpreter.scala:101)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$4(MainTestLab2.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test case_1_extensions_3.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: RecordExp(Map(field1 -> IntLit(3), abc -> IntLit(2), efg -> IntLit(1))) (of class simpret.parser.RecordExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:65)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.fixAutoTest(MainTestInterpreter.scala:101)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$4(MainTestLab2.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test case_1_extensions_4.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: ConsExp(IntLit(1),ConsExp(IntLit(2),ConsExp(IntLit(3),NilExp(IntTy)))) (of class simpret.parser.ConsExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:65)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.fixAutoTest(MainTestInterpreter.scala:101)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$4(MainTestLab2.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test case_2_letin_0.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  LamExp(x,IntTy,PlusExp(Variable(x),IntLit(5))) did not equal IntLit(10) (MainTestInterpreter.scala:111)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test case_2_times_0.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  IntLit(5) did not equal IntLit(25) (MainTestInterpreter.scala:111)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- fixpoint test case_2_times_1.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test case_2_times_2.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  IntLit(12) did not equal IntLit(-396) (MainTestInterpreter.scala:111)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test case_3_factorial_0.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  IntLit(0) did not equal IntLit(1) (MainTestInterpreter.scala:111)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test case_3_factorial_1.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  IntLit(4) did not equal IntLit(24) (MainTestInterpreter.scala:111)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- fixpoint test case_3_factorial_2.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  IntLit(5) did not equal IntLit(120) (MainTestInterpreter.scala:111)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- typing test add.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- typing test app_2.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- typing test fix.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- typing test fix_2.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- typing test fix_3.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- typing test fix_4.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- typing test fix_5.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- typing test headType.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: HeadExp(LtExp(ConsExp(BoolLit(true),ConsExp(BoolLit(false),NilExp(BoolTy))),IntLit(3))) (of class simpret.parser.HeadExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTypeTest(MainTestInterpreter.scala:88)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$6(MainTestLab2.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- typing test if.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- typing test if_2.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- typing test isNilType.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: IsNilExp(LtExp(NilExp(IntTy),IntLit(2))) (of class simpret.parser.IsNilExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:31)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTypeTest(MainTestInterpreter.scala:88)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$6(MainTestLab2.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- typing test lessThan.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- typing test let.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- typing test listMixedType.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: ConsExp(IntLit(3),ConsExp(BoolLit(true),NilExp(IntTy))) (of class simpret.parser.ConsExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTypeTest(MainTestInterpreter.scala:88)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$6(MainTestLab2.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- typing test listMixup.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: TailExp(HeadExp(ConsExp(IntLit(2),ConsExp(IntLit(3),NilExp(IntTy))))) (of class simpret.parser.TailExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTypeTest(MainTestInterpreter.scala:88)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$6(MainTestLab2.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- typing test minus.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- typing test recordMemberUntyped.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: RecordExp(Map(a -> Variable(x))) (of class simpret.parser.RecordExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTypeTest(MainTestInterpreter.scala:88)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$6(MainTestLab2.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- typing test recordProj.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: ProjRecordExp(RecordExp(Map(a -> BoolLit(true), b -> IntLit(2))),a) (of class simpret.parser.ProjRecordExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:45)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTypeTest(MainTestInterpreter.scala:88)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$6(MainTestLab2.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- typing test recordWrongName.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: ProjRecordExp(RecordExp(Map(a -> IntLit(3), b -> IntLit(4))),c) (of class simpret.parser.ProjRecordExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTypeTest(MainTestInterpreter.scala:88)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$6(MainTestLab2.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- typing test recordWrongName_2.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: ProjRecordExp(ProjTupleExp(TupleExp(List(IntLit(2), RecordExp(Map(a -> IntLit(5), work -> LamExp(x,IntTy,PlusExp(Variable(x),IntLit(1))))))),2),c) (of class simpret.parser.ProjRecordExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTypeTest(MainTestInterpreter.scala:88)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$6(MainTestLab2.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- typing test tailType.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: TailExp(LtExp(ConsExp(IntLit(3),NilExp(IntTy)),IntLit(2))) (of class simpret.parser.TailExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTypeTest(MainTestInterpreter.scala:88)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$6(MainTestLab2.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- typing test tuple_1.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: TupleExp(List(IntLit(2), Variable(x), IntLit(3))) (of class simpret.parser.TupleExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTypeTest(MainTestInterpreter.scala:88)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$6(MainTestLab2.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- typing test tuple_2.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: ProjTupleExp(TupleExp(List(BoolLit(true), IntLit(2))),1) (of class simpret.parser.ProjTupleExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:41)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTypeTest(MainTestInterpreter.scala:88)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$6(MainTestLab2.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- typing test tupleOutOfBound.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: ProjTupleExp(TupleExp(List(IntLit(0), IntLit(1))),3) (of class simpret.parser.ProjTupleExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTypeTest(MainTestInterpreter.scala:88)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$6(MainTestLab2.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- typing test tupleOutOfBound_2.sint *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: ProjTupleExp(TupleExp(List(IntLit(0), IntLit(1))),0) (of class simpret.parser.ProjTupleExp)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.check(Typechecker.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.typechecker.Typechecker$.apply(Typechecker.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestInterpreter.singleAutoTypeTest(MainTestInterpreter.scala:88)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at simpret.MainTestLab2.$anonfun$new$6(MainTestLab2.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- typing test unboundVariable.sint[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- typing test var.sint[0m[0m

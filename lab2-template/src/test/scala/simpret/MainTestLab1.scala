@@ -6,7 +6,7 @@ import simpret.parser._
 
 class MainTestLab1 extends MainTestInterpreter {
   val filesStep = getListOfFiles("src/test/sint/lab1/steptests", List("sint")).sorted
-  val filesFix = getListOfFiles("src/test/sint/lab1/fixpointtests", List("sint")).sorted
+  //val filesFix = getListOfFiles("src/test/sint/lab1/fixpointtests", List("sint")).sorted
   val notypecheck = getListOfFiles("src/test/sint/lab1/notypecheck", List("sint")).sorted
 
   filesStep.foreach { file =>
@@ -15,11 +15,13 @@ class MainTestLab1 extends MainTestInterpreter {
     }
   }
 
+/**
   filesFix.foreach { file =>
     test("fixpoint test " + file.getName()) {
       fixAutoTest(file)
     }
   }
+**/
 
   notypecheck.foreach { file =>
     test("fixpoint test w.o. type check " + file.getName()) {

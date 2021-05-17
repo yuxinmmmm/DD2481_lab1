@@ -29,13 +29,13 @@ object Typechecker {
         case IntLit(x) => IntTy
 
         case CondExp(e1,e2,e3) => check(e1, env) match {
-        case BoolTy => {
-          val t2 = check(e2, env)
-          val t3 = check(e3, env)
-          if (t2 == t3) t2
-          else errBranch(t2, t3, x)
-        }
-        case _ => errExpectedType("Boolean", x)
+          case BoolTy => {
+            val t2 = check(e2, env)
+            val t3 = check(e3, env)
+            if (t2 == t3) t2
+            else errBranch(t2, t3, x)
+          }
+          case _ => errExpectedType("Boolean", x)
         }
 
         case PlusExp(e1, e2) => (check(e1, env), check(e2, env)) match {

@@ -6,23 +6,25 @@
     </properties>
                      <testcase classname="simpret.MainTestLab1" name="sint" time="0.079">
                                                  
+                                               </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.005">
+                                                 
                                                </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.003">
                                                  
                                                </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.002">
                                                  
                                                </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.004">
                                                  
-                                               </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.003">
+                                               </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.005">
                                                  
-                                               </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.009">
-                                                 
-                                               </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.002">
-                                                 
-                                               </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.002">
-                                                 
-                                               </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.002">
+                                               </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.006">
                                                  
                                                </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.003">
+                                                 
+                                               </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.002">
+                                                 
+                                               </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.003">
+                                                 
+                                               </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.002">
                                                  
                                                </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.002">
                                                  
@@ -30,17 +32,15 @@
                                                  
                                                </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.002">
                                                  
+                                               </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.005">
+                                                 
                                                </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.002">
-                                                 
-                                               </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.005">
-                                                 
-                                               </testcase><testcase classname="simpret.MainTestLab1" name="sint" time="0.005">
                                                  <failure message="variable (y) has been captured during substitution" type="simpret.interpreter.VariableCapturedEvaluationException">simpret.interpreter.VariableCapturedEvaluationException: variable (y) has been captured during substitution
 	at simpret.interpreter.Interpreter$.errVarCap(Interpreter.scala:16)
 	at simpret.interpreter.Interpreter$.substitute(Interpreter.scala:55)
-	at simpret.interpreter.Interpreter$.step(Interpreter.scala:120)
-	at simpret.interpreter.Interpreter$.step(Interpreter.scala:112)
-	at simpret.interpreter.Interpreter$.eval(Interpreter.scala:170)
+	at simpret.interpreter.Interpreter$.step(Interpreter.scala:123)
+	at simpret.interpreter.Interpreter$.step(Interpreter.scala:115)
+	at simpret.interpreter.Interpreter$.eval(Interpreter.scala:187)
 	at simpret.MainTestInterpreter.fixAutoTest(MainTestInterpreter.scala:111)
 	at simpret.MainTestInterpreter.fixAutoTestNoTypeCheck(MainTestInterpreter.scala:93)
 	at simpret.MainTestLab1.$anonfun$new$4(MainTestLab1.scala:28)
@@ -101,11 +101,11 @@
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 </failure>
-                                               </testcase><testcase classname="simpret.MainTestLab1" name="TestCaseLab1 0 COND" time="0.003">
+                                               </testcase><testcase classname="simpret.MainTestLab1" name="TestCaseLab1 0 COND" time="0.002">
                                                  
                                                </testcase><testcase classname="simpret.MainTestLab1" name="TestCaseLab1 1 ABC" time="0.0">
                                                  
-                                               </testcase><testcase classname="simpret.MainTestLab1" name="TestCaseLab1 2 XYZ" time="0.0">
+                                               </testcase><testcase classname="simpret.MainTestLab1" name="TestCaseLab1 2 XYZ" time="0.001">
                                                  
                                                </testcase>
                      <system-out><![CDATA[]]></system-out>

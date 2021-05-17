@@ -17,24 +17,14 @@
 [0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to C:\D\PycharmProjects\dd2481_lab2\DD2481_lab1\lab2-template\target\scala-2.12\classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.1.1:compile for Scala 2.12.8[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.1.1:compile for Scala 2.12.8[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 3d71fbb5 for Scala compiler version 2.12.8[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 1bee3ce2 for Scala compiler version 2.12.8[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	C:\Users\11235\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.8.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	C:\D\PycharmProjects\dd2481_lab2\DD2481_lab1\lab2-template\target\scala-2.12\classes;C:\Users\11235\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.12\bundles\scala-parser-combinators_2.12-1.1.1.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.8435082 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.8173074 s[0m
 [0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from simpret.interpreter.Interpreter...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(simpret.interpreter.Interpreter)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(simpret.interpreter.Interpreter)[0m
-[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of simpret.Main. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(simpret.interpreter.Interpreter,ModifiedNames(changes = UsedName(substitute,[Default]))) invalidates 1 classes due to The simpret.interpreter.Interpreter has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(substitute,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(simpret.interpreter.Interpreter)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m        [0m
 [0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m

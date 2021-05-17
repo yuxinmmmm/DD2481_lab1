@@ -26,7 +26,7 @@ object Typechecker {
         }
 
         case BoolLit(_) => BoolTy
-        case IntLit(x) => IntTy
+        case IntLit(_) => IntTy
 
         case CondExp(e1,e2,e3) => check(e1, env) match {
           case BoolTy => {
@@ -73,6 +73,18 @@ object Typechecker {
             else errArrowNotSame(t1, t2, x)
           }
           case _ => errExpectedType("ArrowTy(t, t)", x)
+        }
+
+        case TupleExp(el) => TupleTy(el.map(x => check(x, env)))
+
+        case ProjTupleExp(e, i) => check(e, env) match {
+          case TupleTy(tyl) => {
+            if (i <= 0) errProjTooSmall(e)
+            else if (i > tyl.size) errProjTooBig(tyl.size, e)
+            //interpreter indexes at 1
+            else tyl(i - 1)
+          }
+          case _ => errExpectedType("TupleTy", e)
         }
 
 

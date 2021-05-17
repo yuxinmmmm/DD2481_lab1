@@ -140,11 +140,11 @@ object Interpreter {
       // E-Minus
       case UMinExp(x) if !isvalue(x) => step(x) match {
         case Some(x1) => Some(UMinExp(x1))
-        case None => None
+        case _ => None
       }
       // E-MinusVal
       case UMinExp(x) => x match {
-        case IntLit(x1) => Some(IntLit(x1 * (-1)))
+        case IntLit(x1) => Some(IntLit(-x1))
         case _ => None
       }
       // E-Let
@@ -161,16 +161,23 @@ object Interpreter {
       }
       // E-FixBeta
       case FixAppExp(x) => x match {
-        case LamExp(id, t1, e) => Some(substitute(id, tree, e))
+        case LamExp(id, t, e) => Some(substitute(e, id, tree))
         case _ => None
       }
       //Tuples
       case TupleExp(x) => {
-        def ifvector(l: List[AST]): Option[List[AST]] = {
-          l match {
-            case (x1 :: es) if is
-          }
+        var i = 0
+        while(isvalue(x(i))) i += 1
+        step(x(i)) match {
+          case Some(x1) => Some(TupleExp(x.take(i) ++ List(x1) ++ x.drop(i+1)))
         }
+      }
+      // E-ProjTuple
+      case ProjTupleExp(TupleExp(x), i) => Some(x(i-1))
+      // E-Proj
+      case ProjTupleExp(x, y) if !isvalue(x) => step(x) match {
+        case Some(x1) => Some(ProjTupleExp(x1, y))
+        case _ => None
       }
       case _ => None
 	  }

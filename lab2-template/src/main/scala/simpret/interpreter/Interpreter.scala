@@ -43,28 +43,31 @@ object Interpreter {
   }
 
   /* function for carrying out a substitution */
-  /* [x -> y] t */
-  def substitute(t: AST, x: String, y: AST): AST = t match {
-    case Variable(t1) if (t1==x) => y
+  /* [x -> s] t */
+  def substitute(t: AST, x: String, s: AST): AST = t match {
+    case Variable(t1) if (t1==x) => s
     case Variable(t1) if (t1!=x) => t
     //case LamExp(t1, e) if (t1==x) => t
-    //case LamExp(t1, e) if (t1!=x)&&(!freevars(y).contains(t1)) => LamExp(t1, substitute(e, x, y))
-    //case LamExp(t1, e) if (t1!=x)&&(freevars(y).contains(t1)) => LamExp(identifier, substitute(alphaReduce(e, t1, identifier), x, y))
+    //case LamExp(t1, e) if (t1!=x)&&(!freevars(s).contains(t1)) => LamExp(t1, substitute(e, x, s))
+    //case LamExp(t1, e) if (t1!=x)&&(freevars(s).contains(t1)) => LamExp(identifier, substitute(alphaReduce(e, t1, identifier), x, s))
     case LamExp(t1, ty, e) if (t1==x) => t
-    case LamExp(t1, ty, e) if (t1!=x)&&(!freevars(y).contains(t1)) => LamExp(t1, ty, substitute(e, x, y))
-    case LamExp(t1, ty, e) if (t1!=x)&&(freevars(y).contains(t1)) => errVarCap(t1, y)
+    case LamExp(t1, ty, e) if (t1!=x)&&(!freevars(s).contains(t1)) => LamExp(t1, ty, substitute(e, x, s))
+    case LamExp(t1, ty, e) if (t1!=x)&&(freevars(s).contains(t1)) => errVarCap(t1, s)
 
-    case AppExp(e1, e2) => AppExp(substitute(e1, x, y), substitute(e2, x, y))
-    case IsZeroExp(e) => IsZeroExp(substitute(e, x, y))
-    case PlusExp(e1, e2) => PlusExp(substitute(e1, x, y), substitute(e2, x, y))
-    case CondExp(c, e1, e2) => CondExp(substitute(c, x, y), substitute(e1, x, y), substitute(e2, x, y))
+    case AppExp(e1, e2) => AppExp(substitute(e1, x, s), substitute(e2, x, s))
+    case IsZeroExp(e) => IsZeroExp(substitute(e, x, s))
+    case PlusExp(e1, e2) => PlusExp(substitute(e1, x, s), substitute(e2, x, s))
+    case CondExp(c, e1, e2) => CondExp(substitute(c, x, s), substitute(e1, x, s), substitute(e2, x, s))
 
-    case LtExp(e1, e2) => LtExp(substitute(e1, x, y), substitute(e2, x, y))
-    case UMinExp(e) => UMinExp(substitute(e, x, y))
-    case FixAppExp(e) => FixAppExp(substitute(e, x, y))
-    case LetExp(id, e1, e2) if (!freevars(y).contains(id))&&(id==x) => LetExp(id, substitute(e1, x, y), e2)
-    case LetExp(id, e1, e2) if (!freevars(y).contains(id))&&(id!=x) => LetExp(id, substitute(e1, x, y), substitute(e2, x, y))
-    case LetExp(id, e1, e2) if (freevars(y).contains(id)) => errVarCap(id, y)
+    case LtExp(e1, e2) => LtExp(substitute(e1, x, s), substitute(e2, x, s))
+    case UMinExp(e) => UMinExp(substitute(e, x, s))
+    case FixAppExp(e) => FixAppExp(substitute(e, x, s))
+    case LetExp(id, e1, e2) if (!freevars(s).contains(id))&&(id==x) => LetExp(id, substitute(e1, x, s), e2)
+    case LetExp(id, e1, e2) if (!freevars(s).contains(id))&&(id!=x) => LetExp(id, substitute(e1, x, s), substitute(e2, x, s))
+    case LetExp(id, e1, e2) if (freevars(s).contains(id)) => errVarCap(id, s)
+
+    case TupleExp(e) => TupleExp(e.map(esub => substitute(esub, x, s)))
+    case ProjTupleExp(e, i) => ProjTupleExp(substitute(e, x, s), i)
 
     case _ => t
 	}
@@ -110,8 +113,8 @@ object Interpreter {
 	  }
 	
 	    case AppExp(x, y) if (!isvalue(x)) => step(x) match{
-        case None => None
-        case Some(x1) => Some(AppExp(x1, y))
+          case None => None
+          case Some(x1) => Some(AppExp(x1, y))
 		  }
         case AppExp(x, y) if (!isvalue(y)) => step(y) match{
         case None => None
@@ -158,10 +161,17 @@ object Interpreter {
       }
       // E-FixBeta
       case FixAppExp(x) => x match {
-        case LamExp(id, t1, e) => Some(substitute(tree, id, e))
+        case LamExp(id, t1, e) => Some(substitute(id, tree, e))
         case _ => None
       }
-
+      //Tuples
+      case TupleExp(x) => {
+        def ifvector(l: List[AST]): Option[List[AST]] = {
+          l match {
+            case (x1 :: es) if is
+          }
+        }
+      }
       case _ => None
 	  }
   }
